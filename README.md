@@ -14,10 +14,12 @@ Transol pre-launch landing page. Read through for documentation
 ## Components <a name = "components"></a>
 
 > ### **Button**
->
-> - variant: main | dark
-> - icon: Boolean
-> - text: String
+
+```
+   - variant: main | dark
+   - icon: Boolean
+   - text: String
+```
 
 ## Style guide <a name = "styling"></a>
 
