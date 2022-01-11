@@ -22,7 +22,7 @@ export const HeroTitle = styled.h1`
   width: 45vw;
   margin-top: 8vh;
   color: white;
-  font-size: clamp(3rem, 4vw, 8rem);
+  font-size: clamp(3rem, 3.8vw, 8rem);
 
   @media (max-width: 800px) {
     width: 100%;

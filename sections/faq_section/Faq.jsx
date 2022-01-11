@@ -45,7 +45,7 @@ const Faq = () => {
     },
     {
       question: `Would Transol be offline? `,
-      answer: `No! All of Transol’s operations and transactions would be carried out solely online (including mechanics diagnosis and field work). You would need an active internet connection to 
+      answer: `No! All of Transol's operations and transactions would be carried out solely online (including mechanics diagnosis and field work). You would need an active internet connection to 
     access the platform for proper data representation `,
       panel: `panel_5`,
     },

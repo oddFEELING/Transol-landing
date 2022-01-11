@@ -15,9 +15,9 @@ Transol pre-launch landing page. Read through for documentation
 
 > ### **Button**
 >
-> variant: main | dark
-> icon: Boolean
-> text: String
+> - variant: main | dark
+> - icon: Boolean
+> - text: String
 
 ## Style guide <a name = "styling"></a>
 
