@@ -7,7 +7,7 @@ import Expert from '../sections/expert_section/Expert';
 import Service from '../sections/service_section/Service';
 import Access from '../sections/access_section/Access';
 import Faq from '../sections/faq_section/Faq';
-import Footer from '../sections/footer_section/footer';
+import Footer from '../sections/footer_section/Footer';
 
 export default function Home() {
   return (

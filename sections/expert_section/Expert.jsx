@@ -3,7 +3,7 @@ import * as S from './Expert_Style';
 import { useTheme } from 'styled-components';
 import SearchIcon from '../../assets/icons/expert_search.svg';
 import SelectIcon from '../../assets/icons/expert_select.svg';
-import GetIcon from '../../assets/icons/Expert_get.svg';
+import GetIcon from '../../assets/icons/expert_get.svg';
 import Step from '../../components/expert_step/Step';
 
 const Expert = () => {
