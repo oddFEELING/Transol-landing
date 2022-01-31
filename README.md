@@ -17,8 +17,9 @@ Transol pre-launch landing page. Read through for documentation
 
 ```
    - variant: main | dark
-   - icon: Boolean
+   - icon: Icon src, also accepts images.
    - text: String
+   - sx: styling props
 ```
 
 ## Style guide <a name = "styling"></a>

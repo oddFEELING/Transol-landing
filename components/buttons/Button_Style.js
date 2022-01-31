@@ -11,7 +11,7 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   gap: 1vw;
   color: white;
-  font-size: clamp(0.6rem, 0.75vw, 4rem);
+  font-size: clamp(0.7rem, 0.77vw, 4rem);
   cursor: pointer;
   transition: 300ms all ease-in-out;
   background-color: ${(props) => {

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const NavBar = styled.section`
   width: 100%;
   height: 8vh;
-  max-height: 50px;
+  max-height: 60px;
   min-height: 30px;
   display: flex;
   position: fixed;
@@ -16,6 +16,8 @@ export const NavBar = styled.section`
   background-color: ${(props) =>
     props.scrolled ? 'rgba(255, 255, 255)' : 'rgba(255, 255, 255,0.6)'};
   font-family: ${(props) => props.font};
+  box-shadow: ${(props) =>
+    props.scrolled ? '3px 6px 20px rgba(0,0,0,0.2)' : ''};
 
   h1 {
     font-weight: 900;
@@ -33,6 +35,46 @@ export const DesktopNavItems = styled.nav`
   justify-content: center;
   font-weight: 500;
   font-size: clamp(0.7rem, 1.2vw, 1rem);
+`;
+
+export const NavLink = styled.p`
+  color: ${(props) => (props.picked ? '#0729a1' : 'inherit')};
+  position: relative;
+  cursor: pointer;
+  font-weight: ${(props) => (props.picked ? '700' : '400')};
+  padding: 0.2vh 0.1vw;
+  font-size: ${(props) =>
+    props.picked
+      ? props.mobile
+        ? 'clamp(1rem, 10.5vw, 3rem)'
+        : 'clamp(1rem, 1.1vw, 3rem)'
+      : props.mobile
+      ? ''
+      : ''};
+  user-select: none;
+  text-decoration: none;
+  transition: 300ms all ease-in-out;
+
+  &::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border-bottom: thin solid black;
+    transition: 400ms all ease-in-out;
+  }
+  &:hover {
+    transform: scale(1.03);
+    color: #0729a1;
+    transition: 400ms all ease-in-out;
+
+    &:hover::after {
+      width: 100%;
+      border-color: #0729a1;
+      transition: 400ms all ease-in-out;
+    }
+  }
 `;
 
 //--------------------------------------->  Mobile components

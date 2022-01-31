@@ -7,8 +7,17 @@ const Step = (props) => {
   const { icon, title, content } = props;
   const theme = useTheme();
 
+  const TiltOptions = {
+    tiltMaxAngleX: 20,
+    tiltMaxAngleY: 20,
+    perspective: 1000,
+    transitionSpeed: 1500,
+    scale: 1.1,
+    gyroscope: false,
+  };
+
   return (
-    <S.Container>
+    <S.Container {...TiltOptions}>
       {/* ----- icon ----- */}
       <S.IconCard>
         <div style={{ width: '30px', height: '30px', position: 'relative' }}>

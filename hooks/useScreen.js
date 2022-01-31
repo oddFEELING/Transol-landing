@@ -5,8 +5,8 @@ const useScreen = () => {
 
   useEffect(() => {
     function handleScreen() {
-      if (window.innerWidth <= 480) setIsMobile(true);
-      if (window.innerWidth > 480) setIsMobile(false);
+      if (window.innerWidth <= 600) setIsMobile(() => true);
+      if (window.innerWidth > 600) setIsMobile(() => false);
     }
     window.addEventListener('load', handleScreen);
     window.addEventListener('resize', handleScreen);

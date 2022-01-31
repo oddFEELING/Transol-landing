@@ -15,7 +15,7 @@ const Footer = () => {
         <p>Terms and Conditions</p>
       </Link>
       <Link href='/'>
-        <p>2021 Transol ltd . All rights reserved</p>
+        <p>2021 Transolution Centre inc LLC . All rights reserved</p>
       </Link>
     </S.Container>
   );
