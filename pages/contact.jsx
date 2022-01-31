@@ -16,7 +16,7 @@ const Contact = () => {
   // Imahge effect
   useEffect(() => {
     function handleImg() {
-      window.innerWidth < 1200 ? setHeroImg(Img2) : setHeroImg(Img1);
+      window.innerWidth < 900 ? setHeroImg(Img2) : setHeroImg(Img1);
     }
 
     window.addEventListener('load', handleImg);
@@ -40,14 +40,14 @@ const Contact = () => {
     <S.Container theme={theme}>
       <Grid container sx={{ height: '100%' }}>
         {/* ----- Pattern section ----- */}
-        <Grid item xs={12} md={12} lg={5} sx={{ zIndex: '1' }}>
+        <Grid item xs={12} md={4} lg={5} sx={{ zIndex: '1' }}>
           <S.PatternDiv>
             <Image src={HeroImg} alt='' layout='fill' className='img' />
           </S.PatternDiv>
         </Grid>
 
         {/* ----- Contact form ----- */}
-        <Grid item xs={12} md={12} lg={7} sx={{ zIndex: '3' }}>
+        <Grid item xs={12} md={8} lg={7} sx={{ zIndex: '3' }}>
           <Form />
         </Grid>
       </Grid>

@@ -29,7 +29,7 @@ export const PatternDiv = styled.section`
   background-color: ${(props) => props.theme.colors.dk};
   box-shadow: 5px 10px 35px rgba(0, 0, 0, 0.3);
 
-  @media (max-width: 1199px) {
+  @media (max-width: 899px) {
     height: 30vh;
   }
 
@@ -46,7 +46,7 @@ export const PatternDiv = styled.section`
     top: 0;
     bottom: 0;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 899px) {
       background-color: rgba(0, 0, 0, 0.5);
     }
   }
