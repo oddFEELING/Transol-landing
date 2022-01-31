@@ -8,7 +8,7 @@ import Img1 from '../assets/images/contact-hero.jpg';
 import Img2 from '../assets/images/contact-hero-2.jpg';
 import Form from '../sections/__contact/form/Form';
 
-const contact = () => {
+const Contact = () => {
   const [HeroImg, setHeroImg] = useState(Img2);
   const theme = useTheme();
   const small = useSmall();
@@ -55,4 +55,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

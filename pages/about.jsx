@@ -4,7 +4,7 @@ import Hero from '../sections/__about/hero_section/Hero';
 import Team from '../sections/__about/team_section/Team';
 import * as S from '../styles/About.style';
 
-const about = () => {
+const About = () => {
   return (
     <S.COntainer>
       <Hero />
@@ -14,4 +14,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
