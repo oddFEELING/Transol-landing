@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useLayoutEffect, useState, useContext } from 'react';
 import Nav_Context from '../context/nav_context/nav_context';
 
 function useSmall() {
@@ -6,7 +6,7 @@ function useSmall() {
   const { state } = useContext(Nav_Context);
 
   // Effect 1
-  useEffect(() => {
+  useLayoutEffect(() => {
     function handleScreen() {
       if (window.innerWidth < 1000) setSmall(() => true);
       if (window.innerWidth > 1000) setSmall(() => false);
@@ -21,7 +21,7 @@ function useSmall() {
   }, [state]);
 
   // Effect 2
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (window.innerWidth < 1000) setSmall(() => true);
     if (window.innerWidth > 1000) setSmall(() => false);
   }, [state]);
