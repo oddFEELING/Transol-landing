@@ -4,14 +4,7 @@ import Image from 'next/image';
 import { useTheme } from 'styled-components';
 
 const Button = (props) => {
-  const {
-    variant,
-    text,
-    icon,
-    onClick,
-    sx: styles,
-    onCLick: clickAction,
-  } = props;
+  const { variant, text, icon, onClick, sx: styles } = props;
   const theme = useTheme();
 
   return (
@@ -20,7 +13,6 @@ const Button = (props) => {
       theme={theme}
       onClick={onClick}
       style={{ ...styles }}
-      onClick={clickAction}
     >
       {/* ----- Button text ----- */}
       {text}
