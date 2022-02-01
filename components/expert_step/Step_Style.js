@@ -7,6 +7,7 @@ export const Container = styled(Tilt)`
   display: flex;
   padding: 5vh 2vw;
   margin-top: -5vh;
+  user-select: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;

@@ -58,7 +58,7 @@ export const TeamCard = styled.div`
   }
 
   &::after {
-    content: 'Blow';
+    content: '';
     width: 100%;
     height: 100%;
     position: absolute;
@@ -92,10 +92,10 @@ export const CardInfo = styled.div`
   align-items: flex-start;
   flex-direction: column;
   justify-content: space-around;
-  gap: 10%;
+  gap: 12%;
   backdrop-filter: blur(4px);
   border-radius: 0.8vw;
-  padding: 6%;
+  padding: 5%;
   z-index: 5;
   opacity: 0;
   transform: translateY(-45%);
@@ -112,17 +112,17 @@ export const CardInfo = styled.div`
   h1 {
     width: 90%;
     font-weight: 600;
-    font-size: clamp(1.2rem, 1.5vw, 4rem);
+    font-size: clamp(1rem, 1.5vw, 4rem);
   }
 
   h3 {
     font-weight: 300;
-    font-size: clamp(0.8rem, 0.8vw, 4rem);
+    font-size: clamp(0.5rem, 0.8vw, 4rem);
 
     b {
       font-weight: 700;
       letter-spacing: 2px;
-      font-size: clamp(0.8rem, 0.9vw, 4rem);
+      font-size: clamp(0.6rem, 0.9vw, 4rem);
     }
   }
 `;
@@ -137,7 +137,9 @@ export const SocialDiv = styled.div`
 
   div {
     width: 12%;
+    /* min-width: 30px; */
     height: 55%;
+    min-height: 13px;
     display: flex;
     position: relative;
     align-items: center;

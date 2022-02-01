@@ -20,16 +20,22 @@ const Team = () => {
   // team members info
   const TeamData = [
     {
-      name: 'Oyedepo Oyelere',
-      image: OyeImg,
-      role: 'COO',
-      desc: 'Chief Operations Officer, overseeing service implementation.',
+      name: 'Abiodun Damilare',
+      image: DamilareImg,
+      role: 'CEO',
+      desc: 'Founder/ CEO. Head of services and operations, agenda direction.',
     },
     {
       name: 'Oluwole Ojikutu',
       image: OluImg,
       role: 'CFO',
-      desc: 'Chief Financial Officer, investment regulation compliance.',
+      desc: 'Chief Financial Officer, Financial planning, investment advisory, cash flow management.',
+    },
+    {
+      name: 'Oyedepo Oyelere',
+      image: OyeImg,
+      role: 'COO',
+      desc: 'Chief Operations Officer, overseeing service implementation.',
     },
     {
       name: 'Aishat Salami',
@@ -41,13 +47,7 @@ const Team = () => {
       name: 'Alawode Emma',
       image: EmmaImg,
       role: 'CTO',
-      desc: 'Research and Development process. System development. Web development, UI/UX prototyping.',
-    },
-    {
-      name: 'Abiodun Damilare',
-      image: DamilareImg,
-      role: 'CEO',
-      desc: 'Founder/ CEO. Head of services and operations, agenda direction.',
+      desc: 'Research and Development process. System development and UI/UX prototyping.',
     },
     {
       name: 'Taiwo Giwa ',
