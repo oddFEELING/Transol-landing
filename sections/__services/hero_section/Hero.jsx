@@ -34,11 +34,11 @@ const Hero = () => {
       )}
 
       <S.HeroTitle>
-        At TRANSOL
-        <br /> We offer a range <br /> of services
+        At TRANSOL We <br />
+        offer a wide range <br /> of <b>services</b>
       </S.HeroTitle>
       <S.HeroSubText>
-        All of which can are handled by specialists in their respective fields.
+        All of which are handled by specialists in their respective fields.
       </S.HeroSubText>
       <Button variant='main' text='Get early access' icon={BtnIcon} />
     </S.Container>

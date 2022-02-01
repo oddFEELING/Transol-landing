@@ -49,6 +49,10 @@ export const HeroTitle = styled.h1`
     width: 100%;
     font-size: clamp(2.5rem, 6.5vw, 5rem);
   }
+
+  b {
+    color: ${(props) => props.theme.colors.main};
+  }
 `;
 
 export const HeroSubText = styled.p`

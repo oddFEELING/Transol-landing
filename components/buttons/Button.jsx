@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import * as S from './Button_Style';
 import Image from 'next/image';
+import AOS from 'aos';
 import { useTheme } from 'styled-components';
 
 const Button = (props) => {
-  const { variant, text, icon, onClick, sx: styles } = props;
+  const { variant, text, icon, onClick, sx: styles, 'anim-aos': aos } = props;
   const theme = useTheme();
 
   return (
@@ -13,6 +14,10 @@ const Button = (props) => {
       theme={theme}
       onClick={onClick}
       style={{ ...styles }}
+      data-aos={aos?.anim}
+      data-aos-delay={aos?.delay}
+      data-aos-offset={aos?.offset}
+      data-aos-duration={aos?.duration}
     >
       {/* ----- Button text ----- */}
       {text}

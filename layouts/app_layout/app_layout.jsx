@@ -12,6 +12,10 @@ const App_Layout = ({ children }) => {
         <title>Transol</title>
         <meta name='description' content='Transol landing page' />
         <link rel='icon' href='/favicon.ico' />
+        <link
+          href='https://unpkg.com/aos@2.3.1/dist/aos.css'
+          rel='stylesheet'
+        />
       </Head>
       <Nav />
       {children}

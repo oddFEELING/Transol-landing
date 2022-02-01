@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import * as S from './Step_Style';
+import AOS from 'aos';
 import { useTheme } from 'styled-components';
 
 const Step = (props) => {
@@ -16,12 +17,23 @@ const Step = (props) => {
     gyroscope: false,
   };
 
+  // AOs init effect
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      offset: 0,
+    });
+  }, []);
+
   return (
     <S.Container {...TiltOptions}>
       {/* ----- icon ----- */}
       <S.IconCard>
-        <div style={{ width: '30px', height: '30px', position: 'relative' }}>
-          <Image src={icon} alt='' layout='fill' />
+        <div
+          style={{ width: '30px', height: '30px', position: 'relative' }}
+          data-aos='fade-down'
+        >
+          <Image src={icon} alt='' layout='fill' data-aos='fade-up' />
         </div>
       </S.IconCard>
 

@@ -14,6 +14,7 @@ const Content = () => {
     transitionSpeed: 400,
     gyroscope: false,
   };
+
   return (
     <S.AbtContainer theme={theme}>
       <S.ParallaxContainer {...tiltOptions}>
