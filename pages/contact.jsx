@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import * as S from '../styles/Contact.style';
 import { useTheme } from 'styled-components';
 import useSmall from '../hooks/useSmall';
@@ -7,11 +7,13 @@ import Image from 'next/image';
 import Img1 from '../assets/images/contact-hero.jpg';
 import Img2 from '../assets/images/contact-hero-2.jpg';
 import Form from '../sections/__contact/form/Form';
+import Access_Context from '../context/access_context/Access_Context';
 
 const Contact = () => {
   const [HeroImg, setHeroImg] = useState(Img2);
   const theme = useTheme();
   const small = useSmall();
+  const { state } = useContext(Access_Context);
 
   // Imahge effect
   useEffect(() => {
@@ -37,7 +39,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <S.Container theme={theme}>
+    <S.Container theme={theme} modal={state.value}>
       <Grid container sx={{ height: '100%' }}>
         {/* ----- Pattern section ----- */}
         <Grid item xs={12} md={4} lg={5} sx={{ zIndex: '1' }}>

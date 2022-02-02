@@ -16,7 +16,7 @@ export const ButtonContainer = styled.div`
   transition: 300ms all ease-in-out;
   background-color: ${(props) => {
     if (props.variant === 'main') return props.theme.colors.main;
-    if (props.variant === 'dark') return props.theme.colors.dark;
+    if (props.variant === 'dark') return props.theme.colors.dk;
   }};
 
   &:hover {

@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import * as S from './Step_Style';
-import AOS from 'aos';
 import { useTheme } from 'styled-components';
 
 const Step = (props) => {
@@ -16,14 +15,6 @@ const Step = (props) => {
     scale: 1.1,
     gyroscope: false,
   };
-
-  // AOs init effect
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      offset: 0,
-    });
-  }, []);
 
   return (
     <S.Container {...TiltOptions}>

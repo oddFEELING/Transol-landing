@@ -7,6 +7,7 @@ export const Container = styled.div`
   overflow: hidden;
   display: flex;
   gap: 2vh;
+  filter: ${(props) => (props.modal ? '20px)' : '')};
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;

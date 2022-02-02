@@ -8,7 +8,7 @@ export const NavBar = styled.section`
   min-height: 30px;
   display: flex;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   top: 0;
   padding: 5px 3vw;
   align-items: center;

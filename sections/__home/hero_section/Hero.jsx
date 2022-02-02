@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import * as S from './Hero_Style';
 import Image from 'next/image';
 import Button from '../../../components/buttons/Button';
@@ -8,9 +8,11 @@ import Icon_2 from '../../../assets/icons/hero_btn_2.svg';
 import bgImg from '/assets/images/city.jpg';
 import HeroTag from './HeroTag';
 import useSmall from '../../../hooks/useSmall';
+import Access_Context from '../../../context/access_context/Access_Context';
 
 const Hero = () => {
   const Small = useSmall();
+  const { toggleAccess: action } = useContext(Access_Context);
 
   // lottie animation settings
   const lottieStyles = {
@@ -38,7 +40,8 @@ const Hero = () => {
           ' Anywhere'
         ) : (
           <b style={{ color: theme.colors.main }}>
-            <HeroTag />
+            {/* <HeroTag /> */}
+            {' Anywhere'}
           </b>
         )}
         <br /> in few minutes
@@ -53,7 +56,12 @@ const Hero = () => {
 
       {/* ----- Buttons section ----- */}
       <S.ButtonSection>
-        <Button variant='main' text='Get early access' icon={Icon_1} />
+        <Button
+          variant='main'
+          text='Get early access'
+          icon={Icon_1}
+          onClick={action}
+        />
         <Button variant='dark' text='Watch video' icon={Icon_2} />
       </S.ButtonSection>
 

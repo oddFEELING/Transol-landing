@@ -45,6 +45,7 @@ export const ServiceCard = styled.section`
 export const ServiceImg = styled.div`
   width: 35%;
   height: 120%;
+  user-select: none;
   display: flex;
   position: relative;
   border-radius: 1vw;
@@ -54,7 +55,7 @@ export const ServiceImg = styled.div`
   /* small screen */
   @media (max-width: 800px) {
     width: 100%;
-    height: 50%;
+    height: 70%;
     border-radius: 0;
     background-color: rgba(7, 41, 181, 0.035);
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
@@ -64,7 +65,7 @@ export const ServiceImg = styled.div`
 // text area
 export const TextArea = styled.div`
   width: 70%;
-  height: 90%;
+  height: 85%;
   display: flex;
   z-index: 4;
   padding: 5vh 2vw;
@@ -85,7 +86,7 @@ export const TextArea = styled.div`
   /* small screen */
   @media (max-width: 800px) {
     width: 100%;
-    height: 50%;
+    height: 30%;
     text-align: center;
     justify-content: flex-start;
     align-items: center;
@@ -98,16 +99,21 @@ export const TextArea = styled.div`
   h1 {
     font-size: clamp(1.4rem, 2.2vw, 6rem);
     /* margin-top: -10%; */
+
+    @media (max-width: 800px) {
+      font-size: 1.4rem;
+    }
   }
 
   p {
     color: rgba(255, 255, 255, 0.7);
     font-family: ${(props) => props.theme.fonts.sc_font};
     font-size: clamp(0.7rem, 1vw, 6rem);
-    width: 60%;
+    width: 70%;
 
     @media (max-width: 800px) {
       width: 80%;
+      font-size: 0.9rem;
     }
   }
 `;

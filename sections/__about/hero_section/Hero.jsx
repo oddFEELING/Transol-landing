@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import bgImg from '../../../assets/images/about-bg.jpg';
 import * as S from './hero.style';
@@ -6,9 +6,11 @@ import { useTheme } from 'styled-components';
 import Button from '../../../components/buttons/Button';
 import ArrowIcon from '../../../assets/icons/hero_btn_1.svg';
 import useSmall from '../../../hooks/useSmall';
+import Access_Context from '../../../context/access_context/Access_Context';
 
 const Hero = () => {
   const theme = useTheme();
+  const { toggleAccess: action } = useContext(Access_Context);
 
   const lottieStyles = {
     width: '60%',
@@ -50,7 +52,12 @@ const Hero = () => {
           The company that puts custoners ahead of all decisions regardless of
           roles and status.
         </S.HeroSubText>
-        <Button variant='main' text='Get early access' icon={ArrowIcon} />
+        <Button
+          variant='main'
+          text='Get early access'
+          icon={ArrowIcon}
+          onClick={action}
+        />
       </S.TextArea>
     </S.Container>
   );

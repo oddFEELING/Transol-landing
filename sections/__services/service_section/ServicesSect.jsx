@@ -4,6 +4,8 @@ import TowImg from '../../../assets/images/service-tow.svg';
 import SaleImg from '../../../assets/images/service-sale.svg';
 import FleetImg from '../../../assets/images/service-fleet.svg';
 import FixImg from '../../../assets/images/service-fix.svg';
+import MechImg from '../../../assets/images/service-mech.svg';
+import PriceImg from '../../../assets/images/service-price.svg';
 import { useTheme } from 'styled-components';
 import AOS from 'aos';
 import * as S from './ServicesSect.style';
@@ -12,27 +14,38 @@ const ServicesSect = () => {
   const theme = useTheme();
   const serviceData = [
     {
-      title: 'VEHICLE REPAIR',
-      content:
-        'Being the major basis of transol services, getting vehicle repair services from any place at anytime in under 30mins whilst saving you all the hassle of ',
-      image: FixImg,
+      title: 'ON DEMAND MECHANICS',
+      content: `Being the major basis of transol services, getting vehicle repair services from any place at anytime in under 30mins whilst saving you all the hassle of labour in just a few clicks.`,
+      image: MechImg,
       left: true,
     },
     {
       title: 'FLEET MANAGEMENT',
-      content: 'Get repair specialists anywhere, anytime to a given locaton',
+      content: `We manage your fleet of cars either as an individual or a Coporate body. Platform for Coporate firms and individuals to register vehicles for proper Maintenance, Repair and Diagnosis.`,
       image: FleetImg,
       left: false,
     },
     {
+      title: 'HIRE ARTISANS',
+      content: `Subscribe to the "TRANSOL PREMIUM" feature to enjoy making an order and approved access to unlimited data of tested and trusted artisans.`,
+      image: FixImg,
+      left: true,
+    },
+    {
+      title: 'FLEXIBLE PRICE PLANS',
+      content: `Subscribe to the "TRANSOL PREMIUM" feature to enjoy making an order and approved access to unlimited data of tested and trusted artisans.`,
+      image: PriceImg,
+      left: false,
+    },
+    {
       title: 'TOW SERVICES',
-      content: 'Get repair specialists anywhere, anytime to a given locaton',
+      content: `You got critical Auto issues ( beyond quick repair ) ? get a Tow Service Assistant to your preferred destination ( from a point A - point B ). For proper diagnosis, repair and maintenance, we tow your vehicle to our work station with proofed, certified and experience consulting professionals.`,
       image: TowImg,
       left: true,
     },
     {
       title: 'VEHICLE PART SALES',
-      content: 'Get repair specialists anywhere, anytime to a given locaton',
+      content: `Servicing made Simple! Buy vehicle parts of your choice and get it delivered to your preferred destination and even installed, add to cart and monitor ongoing orders and delivery processing.`,
       image: SaleImg,
       left: false,
     },
@@ -56,7 +69,9 @@ const ServicesSect = () => {
               left={item.left}
               data-aos={item.left ? 'fade-right' : 'fade-left'}
             >
-              <h1>{item.title}</h1>
+              <h1 data-aos={item.left ? 'fade-right' : 'fade-left'}>
+                {item.title}
+              </h1>
               <p>{item.content}</p>
             </S.TextArea>
           </S.ServiceCard>

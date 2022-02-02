@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import * as S from './Button_Style';
 import Image from 'next/image';
 import AOS from 'aos';

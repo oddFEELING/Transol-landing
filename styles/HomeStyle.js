@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 100%;
   height: auto;
   min-height: auto;
+  filter: ${(props) => (props.modal ? 'blur(15px)' : '')};
   display: flex;
   position: relative;
 `;

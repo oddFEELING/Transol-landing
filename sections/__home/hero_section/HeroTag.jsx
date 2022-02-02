@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import TypeIt from 'typeit-react';
+import Access_Context from '../../../context/access_context/Access_Context';
+import Nav_Context from '../../../context/nav_context/nav_context';
 
 const HeroTag = () => {
   const [IsVisible, setIsVisible] = useState(false);

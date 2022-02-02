@@ -1,9 +1,9 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const useScreen = () => {
   const [IsMobile, setIsMobile] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     function handleScreen() {
       if (window.innerWidth <= 600) setIsMobile(() => true);
       if (window.innerWidth > 600) setIsMobile(() => false);
