@@ -20,11 +20,8 @@ const Step = (props) => {
     <S.Container {...TiltOptions}>
       {/* ----- icon ----- */}
       <S.IconCard>
-        <div
-          style={{ width: '30px', height: '30px', position: 'relative' }}
-          data-aos='fade-down'
-        >
-          <Image src={icon} alt='' layout='fill' data-aos='fade-up' />
+        <div style={{ width: '30px', height: '30px', position: 'relative' }}>
+          <Image src={icon} alt='' layout='fill' />
         </div>
       </S.IconCard>
 

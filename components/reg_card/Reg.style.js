@@ -8,7 +8,7 @@ export const Container = styled.div`
   z-index: 50;
   align-items: center;
   justify-content: center;
-  top: 15vh;
+  top: 12vh;
   pointer-events: ${(props) => (props.open ? 'auto' : 'none')};
   opacity: ${(props) => (props.open ? '1' : '0')};
   transform: ${(props) => (props.open ? 'translateY(0)' : 'translateY(-20vh)')};
@@ -21,6 +21,8 @@ export const Container = styled.div`
 
   @media (max-width: 800px) {
     width: 90%;
+    height: 50vh;
+    margin-top: 15vh;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -46,9 +48,10 @@ export const CardImg = styled.div`
 
 export const CardForm = styled.form`
   width: 60%;
+  min-height: 400px;
   height: 100%;
   display: flex;
-  padding: 8% 0;
+  padding: 10% 0;
   gap: 4%;
   align-items: center;
   justify-content: flex-start;
@@ -88,8 +91,8 @@ export const CardForm = styled.form`
 `;
 
 export const CloseBtn = styled.div`
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   /* background-color: red; */
   position: absolute;
   top: 3%;
