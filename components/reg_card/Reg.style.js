@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 55vw;
   height: 70vh;
-  min-height: 590px;
+  min-height: 350px;
   display: flex;
   position: fixed;
   z-index: 50;
   align-items: center;
   justify-content: center;
-  top: 12vh;
+  top: 10vh;
   pointer-events: ${(props) => (props.open ? 'auto' : 'none')};
   opacity: ${(props) => (props.open ? '1' : '0')};
   transform: ${(props) => (props.open ? 'translateY(0)' : 'translateY(-20vh)')};
