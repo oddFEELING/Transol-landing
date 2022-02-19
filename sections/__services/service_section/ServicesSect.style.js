@@ -37,6 +37,7 @@ export const ServiceCard = styled.section`
     flex-direction: column;
     height: 80vh;
     gap: 0;
+    border: 0;
     justify-content: flex-start;
   }
 `;
@@ -55,10 +56,16 @@ export const ServiceImg = styled.div`
   /* small screen */
   @media (max-width: 800px) {
     width: 100%;
-    height: 70%;
+    height: 50%;
+    padding: 10% 15%;
     border-radius: 0;
     background-color: rgba(7, 41, 181, 0.035);
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+
+    .image {
+      width: 50%;
+      height: 50%;
+    }
   }
 `;
 
@@ -86,7 +93,7 @@ export const TextArea = styled.div`
   /* small screen */
   @media (max-width: 800px) {
     width: 100%;
-    height: 30%;
+    height: 50%;
     text-align: center;
     justify-content: flex-start;
     align-items: center;

@@ -63,7 +63,12 @@ const ServicesSect = () => {
         return (
           <S.ServiceCard key={index} left={item.left}>
             <S.ServiceImg data-aos='zoom-in'>
-              <Image src={item.image} alt='' layout='fill' />
+              <Image
+                src={item.image}
+                alt=''
+                layout='intrinsic'
+                className='image'
+              />
             </S.ServiceImg>
             <S.TextArea
               left={item.left}
