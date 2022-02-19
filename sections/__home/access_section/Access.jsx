@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import * as S from './Access_Styles';
 import ButtonIcon from '../../../assets/icons/hero_btn_1.svg';
 import Button from '../../../components/buttons/Button';
 import { useTheme } from 'styled-components';
 import AOS from 'aos';
+import Access_Context from '../../../context/access_context/Access_Context';
 
 const Access = () => {
   const theme = useTheme();
+  const { toggleAccess: action } = useContext(Access_Context);
 
   // AOS effect
   useEffect(() => {
@@ -41,7 +43,7 @@ const Access = () => {
           duration: 500,
           offset: 0,
         }}
-        onClick={() => alert('Mailing System coming soon...')}
+        onClick={action}
       />
     </S.Container>
   );

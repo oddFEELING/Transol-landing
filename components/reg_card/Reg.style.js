@@ -61,8 +61,9 @@ export const CardForm = styled.form`
     width: 90%;
     height: 50px;
     border: 0;
+    color: black;
     outline: ${(props) => `0 solid ${props.theme.colors.main}`};
-    color: ${(props) => (props.dk ? 'black' : 'white')};
+    color: black;
     padding: 0 1.5vw;
     border-radius: 0.6vw;
     font-style: italic;
