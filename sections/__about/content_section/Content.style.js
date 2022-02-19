@@ -88,7 +88,7 @@ export const ContentDiv = styled.div`
     color: ${(props) => props.theme.colors.lt_2};
 
     @media (max-width: 800px) {
-      font-size: clamp(0.85rem, 1.5vw, 6rem);
+      font-size: clamp(0.75rem, 1.4vw, 6rem);
       transform: translateZ(20px);
     }
   }
