@@ -49,8 +49,8 @@ const Service = () => {
             </h1>
             <p>
               Servicing made simple: Buy vehicle parts of choice and get it
-              delivered to your prefered destination, Monitor ongoing orders and
-              delivery processing.
+              delivered to your Preferred destination, Monitor ongoing orders
+              and delivery processing.
             </p>
           </S.TextArea>
         </S.CardDiv>

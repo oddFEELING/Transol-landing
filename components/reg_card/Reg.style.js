@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 55vw;
   height: 70vh;
+  min-height: 590px;
   display: flex;
   position: fixed;
   z-index: 50;
@@ -23,6 +24,7 @@ export const Container = styled.div`
     width: 90%;
     height: 50vh;
     margin-top: 15vh;
+    text-align: center;
     flex-direction: column;
     justify-content: flex-start;
   }

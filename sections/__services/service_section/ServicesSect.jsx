@@ -27,19 +27,19 @@ const ServicesSect = () => {
     },
     {
       title: 'HIRE ARTISANS',
-      content: `Subscribe to the "TRANSOL PREMIUM" feature to enjoy making an order and approved access to unlimited data of tested and trusted artisans.`,
+      content: `Subscribe to the "TRANSOL PREMIUM" feature to enjoy making an order on an approved access to unlimited data of tested and trusted artisans.`,
       image: FixImg,
       left: true,
     },
     {
       title: 'FLEXIBLE PRICE PLANS',
-      content: `Subscribe to the "TRANSOL PREMIUM" feature to enjoy making an order and approved access to unlimited data of tested and trusted artisans.`,
+      content: `Transol offers affordable and reliable price plans for every transol user. Every plan has been designed to bring you transol services with ease.`,
       image: PriceImg,
       left: false,
     },
     {
       title: 'TOW SERVICES',
-      content: `You got critical Auto issues ( beyond quick repair ) ? get a Tow Service Assistant to your preferred destination ( from a point A - point B ). For proper diagnosis, repair and maintenance, we tow your vehicle to our work station with proofed, certified and experience consulting professionals.`,
+      content: `You got critical Auto issues beyond quick repair? get a Tow Service Assistant to your preferred destination from a point A - point B. For proper diagnosis, repair and maintenance, we tow your vehicle to our work station with proofed, certified and experience consulting professionals.`,
       image: TowImg,
       left: true,
     },

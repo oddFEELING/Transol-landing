@@ -11,6 +11,8 @@ import { useTheme } from 'styled-components';
 
 const Reg = () => {
   const formRef = useRef();
+  //-- ref for close button ------------------/
+  const closeRef = useRef();
   const theme = useTheme();
   const { state, toggleAccess: action } = useContext(Access_Context);
   //-- User email object ------------------/
@@ -33,6 +35,7 @@ const Reg = () => {
             console.log(res.data);
             setIsLoading(false);
             formRef.current.reset();
+            closeRef.current.click();
             alert(
               `Congrats ${res.data.payload.name}! You are on our mailing list`
             );
@@ -86,6 +89,7 @@ const Reg = () => {
           action();
           formRef.current?.reset();
         }}
+        ref={closeRef}
       >
         <Image src={CLoseIcon} alt='' layout='fill' />
       </S.CloseBtn>

@@ -49,7 +49,7 @@ const Hero = () => {
           about us at <br /> <b>Transol</b>
         </S.HeroTitle>
         <S.HeroSubText font={theme.fonts.sc_font}>
-          The company that puts custoners ahead of all decisions regardless of
+          The company that puts customers ahead of all decisions regardless of
           roles and status.
         </S.HeroSubText>
         <Button
