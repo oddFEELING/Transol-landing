@@ -25,7 +25,7 @@ export const ServiceCard = styled.section`
   height: 50vh;
   display: flex;
   gap: 5%;
-  border-bottom: thin solid black;
+  border-bottom: thin solid rgba(0, 0, 0, 0.3);
   flex-direction: ${(props) => (props.left ? 'row-reverse' : 'row')};
   text-align: ${(props) => (props.left ? 'right' : 'left')};
   align-items: center;
