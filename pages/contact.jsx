@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import * as S from '../styles/Contact.style';
+import Head from 'next/head';
 import { useTheme } from 'styled-components';
 import useSmall from '../hooks/useSmall';
 import { Grid } from '@mui/material';
@@ -40,6 +41,11 @@ const Contact = () => {
 
   return (
     <S.Container theme={theme} modal={state.value}>
+      <Head>
+        <title>Transol: Contact</title>
+        <meta name='description' content='Transol landing page' />
+        <link rel='icon' href='/logo.png' />
+      </Head>
       <Grid container sx={{ height: '100%' }}>
         {/* ----- Pattern section ----- */}
         <Grid item xs={12} md={4} lg={5} sx={{ zIndex: '1' }}>

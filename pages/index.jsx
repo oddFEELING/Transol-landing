@@ -14,9 +14,9 @@ export default function Home() {
   return (
     <S.Container modal={state.value}>
       <Head>
-        <title>Transol</title>
+        <title>Transol: Home</title>
         <meta name='description' content='Transol landing page' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/logo.png' />
       </Head>
       <S.Main>
         <Hero />

@@ -1,30 +1,22 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import * as S from './Form.styles';
 import Input from '../../../components/input/Input';
 import Button from '../../../components/buttons/Button';
 import BtnIcon from '../../../assets/icons/hero_btn_1.svg';
 
 const Form = () => {
-  const [FormObj, setFormObj] = useState({ name: '', email: '', message: '' });
+  const [Email, setEmail] = useState('');
+  const [Name, setName] = useState('');
+  const [Message, setMessage] = useState('');
+
   const formRef = useRef();
 
-  //-- Input value getter ------------------/
-  const inputGetter = (event) => {
-    return event.target.value;
-  };
-
-  // Handle object change
-  const handleObj = (prop) => (event) => {
-    event.preventDefault();
-    setFormObj(
-      (FormObj) =>
-        (FormObj = {
-          ...FormObj,
-          [prop]: inputGetter(),
-        })
-    );
-    console.log(FormObj);
-  };
+  //-- Form data effect ------------------/
+  useEffect(() => {
+    console.log(Email);
+    console.log(Name);
+    console.log(Message);
+  }, [Email, Name, Message]);
 
   return (
     <S.Container>
@@ -37,10 +29,22 @@ const Form = () => {
           ph='Email'
           variant='single'
           dk
-          onChange={handleObj('email')}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <Input tp='text' ph='Name' variant='single' dk />
-        <Input tp='text' ph='Message here...' variant='multi' dk />
+        <Input
+          tp='text'
+          ph='Name'
+          variant='single'
+          dk
+          onChange={(e) => setName(e.target.value)}
+        />
+        <Input
+          tp='text'
+          ph='Message here...'
+          variant='multi'
+          dk
+          onChange={(e) => setMessage(e.target.value)}
+        />
         <Button
           variant='main'
           text='send!'

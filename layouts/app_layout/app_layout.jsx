@@ -25,7 +25,7 @@ const App_Layout = ({ children }) => {
       <Head>
         <title>Transol</title>
         <meta name='description' content='Transol landing page' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/logo.png' />
         <link
           href='https://unpkg.com/aos@2.3.1/dist/aos.css'
           rel='stylesheet'

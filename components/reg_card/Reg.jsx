@@ -20,6 +20,17 @@ const Reg = () => {
   const [Name, setName] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  {
+    /* <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/shell.js"></script>
+<script>
+  hbspt.forms.create({
+	region: "eu1",
+	portalId: "25592324",
+	formId: "35e834f6-d016-40ea-9829-7ba3b164f655"
+});
+</script> */
+  }
+
   //-- submit handler  ------------------/
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -32,7 +43,6 @@ const Reg = () => {
             email: Email,
           })
           .then((res) => {
-            console.log(res.data);
             setIsLoading(false);
             formRef.current.reset();
             closeRef.current.click();

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Head from 'next/head';
 import useScreen from '../hooks/useScreen';
 import * as S from '../styles/services.styles';
 import Hero from '../sections/__services/hero_section/Hero';
@@ -10,6 +11,11 @@ const Services = () => {
   const { state } = useContext(Access_Context);
   return (
     <S.Container modal={state.value}>
+      <Head>
+        <title>Transol: Services</title>
+        <meta name='description' content='Transol landing page' />
+        <link rel='icon' href='/logo.png' />
+      </Head>
       <Hero />
       <S.Header>
         <h1>Transol Services</h1>
