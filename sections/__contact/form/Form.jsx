@@ -8,14 +8,19 @@ const Form = () => {
   const [FormObj, setFormObj] = useState({ name: '', email: '', message: '' });
   const formRef = useRef();
 
-  // Handle bject change
+  //-- Input value getter ------------------/
+  const inputGetter = (event) => {
+    return event.target.value;
+  };
+
+  // Handle object change
   const handleObj = (prop) => (event) => {
     event.preventDefault();
     setFormObj(
       (FormObj) =>
         (FormObj = {
           ...FormObj,
-          [prop]: event.target.value,
+          [prop]: inputGetter(),
         })
     );
     console.log(FormObj);
