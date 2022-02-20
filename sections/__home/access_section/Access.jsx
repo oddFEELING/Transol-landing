@@ -39,7 +39,7 @@ const Access = () => {
         icon={ButtonIcon}
         anim-aos={{
           anim: 'fade-up',
-          delay: 1000,
+          delay: 500,
           duration: 500,
           offset: 0,
         }}
