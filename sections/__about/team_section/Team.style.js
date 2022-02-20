@@ -124,6 +124,10 @@ export const CardInfo = styled.div`
       letter-spacing: 2px;
       font-size: clamp(0.6rem, 0.9vw, 4rem);
     }
+
+    @media (max-width: 899px) and (min-width: 500px) {
+      font-size: 0.8rem;
+    }
   }
 `;
 

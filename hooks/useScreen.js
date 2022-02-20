@@ -5,16 +5,18 @@ const useScreen = () => {
 
   useEffect(() => {
     function handleScreen() {
-      if (window.innerWidth <= 600) setIsMobile(() => true);
-      if (window.innerWidth > 600) setIsMobile(() => false);
+      if (window.innerWidth <= 720) setIsMobile(() => true);
+      if (window.innerWidth > 720) setIsMobile(() => false);
     }
     window.addEventListener('load', handleScreen);
     window.addEventListener('resize', handleScreen);
+    window.addEventListener('focus', handleScreen);
 
     //   cleanup
     return () => {
       window.removeEventListener('load', handleScreen);
       window.removeEventListener('resize', handleScreen);
+      window.removeEventListener('focus', handleScreen);
     };
   });
 
