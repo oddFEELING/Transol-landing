@@ -24,7 +24,7 @@ const Content = () => {
 
           {/* ----- content ----- */}
           <p>
-            TRANSOLUTION CENTRE LLC, an innovation born out of interest for
+            TRANSOLUTION WORLDWIDE LLC, an innovation born out of interest for
             vehicle management and wellness following researches and studies
             over the years. We are a team of creatives who stand out not just in
             our affection for vehicles but also for our commitment,transparency
