@@ -15,7 +15,7 @@ const Vid = () => {
         title='Transolutions WorldWide'
         frameBorder='0'
         allow='accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        allowfullScreen
+        allowFullScreen
       ></iframe>
       <S.CloeBtn onClick={actions.toggleVid}>
         <Image src={CloseIcon} alt='' layout='fill' />
