@@ -36,7 +36,7 @@ export const Container = styled.div`
   @media (max-width: 800px) {
     width: 90%;
     height: 50vh;
-    margin-top: 15vh;
+    margin-top: 12vh;
     text-align: center;
     flex-direction: column;
     justify-content: flex-start;
