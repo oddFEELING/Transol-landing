@@ -9,6 +9,7 @@ const Form = () => {
   const [Email, setEmail] = useState('');
   const [Name, setName] = useState('');
   const [Message, setMessage] = useState('');
+  const [Loading, setLoading] = useState(false);
 
   const formRef = useRef();
 
@@ -21,6 +22,7 @@ const Form = () => {
 
   //-- handle submit ------------------/
   const submitHandler = async () => {
+    setLoading(true);
     // formRef.current.preventDefault();
     formRef.current.reset();
     try {
@@ -31,10 +33,12 @@ const Form = () => {
           message: Message,
         })
         .then((res) => {
+          setLoading(false);
           console.log(res.data);
           alert('Message Recorded! Thanks for your feedback');
         });
     } catch (err) {
+      setLoading(false);
       alert('Failed to send message');
       console.log(err);
     }
@@ -74,6 +78,7 @@ const Form = () => {
           icon={BtnIcon}
           onClick={submitHandler}
         />
+        {Loading ? <p>Loading...</p> : ''}
       </S.MainForm>
     </S.Container>
   );

@@ -14,7 +14,7 @@ const Reg = () => {
   //-- ref for close button ------------------/
   const closeRef = useRef();
   const theme = useTheme();
-  const { state, toggleAccess: action } = useContext(Access_Context);
+  const { state, actions } = useContext(Access_Context);
   //-- User email object ------------------/
   const [Email, setEmail] = useState('');
   const [Name, setName] = useState('');
@@ -96,7 +96,7 @@ const Reg = () => {
       </S.CardForm>
       <S.CloseBtn
         onClick={() => {
-          action();
+          actions.toggleAccess();
           formRef.current?.reset();
         }}
         ref={closeRef}

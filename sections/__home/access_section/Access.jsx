@@ -8,7 +8,7 @@ import Access_Context from '../../../context/access_context/Access_Context';
 
 const Access = () => {
   const theme = useTheme();
-  const { toggleAccess: action } = useContext(Access_Context);
+  const { actions } = useContext(Access_Context);
 
   // AOS effect
   useEffect(() => {
@@ -43,7 +43,7 @@ const Access = () => {
           duration: 500,
           offset: 0,
         }}
-        onClick={action}
+        onClick={()=> actions.toggleAccess()}
       />
     </S.Container>
   );

@@ -12,7 +12,7 @@ import Access_Context from '../../../context/access_context/Access_Context';
 
 const Hero = () => {
   const Small = useSmall();
-  const { toggleAccess: action } = useContext(Access_Context);
+  const { actions } = useContext(Access_Context);
 
   // lottie animation settings
   const lottieStyles = {
@@ -44,7 +44,7 @@ const Hero = () => {
             {' Anywhere'}
           </b>
         )}
-        <br /> in few minutes
+        <br /> in a few minutes
       </S.HeroTitle>
 
       {/* ----- Sub-text ----- */}
@@ -60,9 +60,14 @@ const Hero = () => {
           variant='main'
           text='Get early access'
           icon={Icon_1}
-          onClick={action}
+          onClick={() => actions.toggleAccess()}
         />
-        <Button variant='dark' text='Watch video' icon={Icon_2} />
+        <Button
+          variant='dark'
+          text='Watch video'
+          icon={Icon_2}
+          onClick={() => actions.toggleVid()}
+        />
       </S.ButtonSection>
 
       {/* lottie animation */}

@@ -2,10 +2,11 @@
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'TOGGLE':
-      return (state = {
-        value: !state.value,
-      });
+    case 'TOGGLE_NEWS':
+      return (state = { ...state, value: !state.value });
+
+    case 'TOGGLE_VIDEO':
+      return (state = { ...state, vid: !state.vid });
 
     default:
       return state;

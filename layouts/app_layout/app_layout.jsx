@@ -7,10 +7,9 @@ import Script from 'next/script';
 import AOS from 'aos';
 import Access_Context from '../../context/access_context/Access_Context';
 import Reg from '../../components/reg_card/Reg';
+import Vid from '../../components/video-player/Vid';
 
 const App_Layout = ({ children }) => {
-  const { toggleAccess } = useContext(Access_Context);
-
   // AOS init effect
   useEffect(() => {
     AOS.init({
@@ -34,6 +33,7 @@ const App_Layout = ({ children }) => {
       <Nav />
       {children}
       <Reg />
+      <Vid />
       <Footer />
       <Script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></Script>
     </S.Main>

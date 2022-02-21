@@ -3,19 +3,22 @@ import Access_Context from './Access_Context';
 import reducer from './reducer';
 
 const AccessContext = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, { value: false });
+  const [state, dispatch] = useReducer(reducer, { value: false, vid: false });
 
   // toggle the state
   function toggleAccess() {
-    dispatch({
-      type: 'TOGGLE',
-    });
+    dispatch({ type: 'TOGGLE_NEWS' });
   }
 
-  const actions = toggleAccess;
+  // toggle video
+  function toggleVid() {
+    dispatch({ type: 'TOGGLE_VIDEO' });
+  }
+
+  const actions = { toggleAccess, toggleVid };
 
   return (
-    <Access_Context.Provider value={{ state, toggleAccess }}>
+    <Access_Context.Provider value={{ state, actions }}>
       {children}
     </Access_Context.Provider>
   );

@@ -10,7 +10,7 @@ import Access_Context from '../../../context/access_context/Access_Context';
 
 const Hero = () => {
   const theme = useTheme();
-  const { toggleAccess: action } = useContext(Access_Context);
+  const { actions } = useContext(Access_Context);
 
   const lottieStyles = {
     width: '60%',
@@ -56,7 +56,7 @@ const Hero = () => {
           variant='main'
           text='Get early access'
           icon={ArrowIcon}
-          onClick={action}
+          onClick={() => actions.toggleAccess()}
         />
       </S.TextArea>
     </S.Container>

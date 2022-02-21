@@ -8,6 +8,7 @@ import Service from '../sections/__home/service_section/Service';
 import Access from '../sections/__home/access_section/Access';
 import Faq from '../sections/__home/faq_section/Faq';
 import Access_Context from '../context/access_context/Access_Context';
+import Vid from '../components/video-player/Vid';
 
 export default function Home() {
   const { state } = useContext(Access_Context);
