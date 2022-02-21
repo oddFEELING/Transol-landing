@@ -70,10 +70,6 @@ export const ContentDiv = styled.div`
     cursor: pointer;
     text-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
 
-    &:hover {
-      color: ${(props) => props.theme.colors.main};
-    }
-
     @media (max-width: 800px) {
       font-size: clamp(1rem, 8.8vw, 6rem);
       transform: translateZ(50px);
