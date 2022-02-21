@@ -13,7 +13,7 @@ const Vid = () => {
         height='100%'
         src='https://www.youtube.com/embed/KtfSY11fzJo?rel=0?playlist=KtfSY11fzJo&loop=1'
         title='Transolutions WorldWide'
-        frameborder='0'
+        frameBorder='0'
         allow='accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
         allowfullScreen
       ></iframe>
