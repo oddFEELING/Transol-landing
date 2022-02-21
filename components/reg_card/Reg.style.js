@@ -1,11 +1,24 @@
 import styled from 'styled-components';
 
+export const Modalbg = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 60;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: ${(props) => (props.open ? '1' : '0')};
+  pointer-events: ${(props) => (props.open ? 'auto' : 'none')};
+`;
+
 export const Container = styled.div`
   width: 55vw;
   height: 70vh;
   min-height: 350px;
   display: flex;
-  position: fixed;
+  /* position: fixed; */
   z-index: 50;
   align-items: center;
   justify-content: center;
@@ -15,7 +28,7 @@ export const Container = styled.div`
   transform: ${(props) => (props.open ? 'translateY(0)' : 'translateY(-20vh)')};
   align-self: center;
   background-color: white;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   border-radius: 0.3vw;
   box-shadow: 5px 10px 35px rgba(0, 0, 0, 0.2);

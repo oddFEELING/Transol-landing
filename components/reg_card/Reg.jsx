@@ -1,5 +1,6 @@
 import React, { useContext, useState, useRef } from 'react';
 import CardImg from '../../assets/images/card-img.jpg';
+import CardImg2 from '../../assets/images/card-img-2.jpg';
 import * as S from './Reg.style';
 import Image from 'next/image';
 import CLoseIcon from '../../assets/icons/close-icon.svg';
@@ -62,48 +63,50 @@ const Reg = () => {
   };
 
   return (
-    <S.Container open={state.value} theme={theme}>
-      <S.CardImg>
-        <Image src={CardImg} alt='' layout='fill' className='img' />
-      </S.CardImg>
-      <S.CardForm ref={formRef}>
-        <h1>Join the Waiting list</h1>
+    <S.Modalbg open={state.value}>
+      <S.Container open={state.value} theme={theme}>
+        <S.CardImg>
+          <Image src={CardImg2} alt='' layout='fill' className='img' />
+        </S.CardImg>
+        <S.CardForm ref={formRef}>
+          <h1>Join the Waiting list</h1>
 
-        {/* ----- full name ----- */}
-        <input
-          type='text'
-          minLength={4}
-          placeholder='Full name'
-          onChange={(e) => setName(e.target.value)}
-        />
+          {/* ----- full name ----- */}
+          <input
+            type='text'
+            minLength={4}
+            placeholder='Full name'
+            onChange={(e) => setName(e.target.value)}
+          />
 
-        {/* ----- email ----- */}
-        <input
-          type='email'
-          placeholder='Email'
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          {/* ----- email ----- */}
+          <input
+            type='email'
+            placeholder='Email'
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        {/* ----- send btn ----- */}
-        <Button
-          variant='dark'
-          text='Subscribe'
-          icon={ArrowIcon}
-          onClick={submitHandler}
-          sx={{ marginTop: '7%', width: '70%', height: '7%' }}
-        />
-        {isLoading ? <p>Loading...</p> : ''}
-      </S.CardForm>
-      <S.CloseBtn
-        onClick={() => {
-          actions.toggleAccess();
-          formRef.current?.reset();
-        }}
-        ref={closeRef}
-      >
-        <Image src={CLoseIcon} alt='' layout='fill' />
-      </S.CloseBtn>
-    </S.Container>
+          {/* ----- send btn ----- */}
+          <Button
+            variant='dark'
+            text='Subscribe'
+            icon={ArrowIcon}
+            onClick={submitHandler}
+            sx={{ marginTop: '7%', width: '70%', height: '7%' }}
+          />
+          {isLoading ? <p>Loading...</p> : ''}
+        </S.CardForm>
+        <S.CloseBtn
+          onClick={() => {
+            actions.toggleAccess();
+            formRef.current?.reset();
+          }}
+          ref={closeRef}
+        >
+          <Image src={CLoseIcon} alt='' layout='fill' />
+        </S.CloseBtn>
+      </S.Container>
+    </S.Modalbg>
   );
 };
 

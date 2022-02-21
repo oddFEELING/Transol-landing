@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  filter: ${(props) => (props.modal ? 'blur(15px)' : '')};
+  /* filter: ${(props) => (props.modal ? 'blur(15px)' : '')}; */
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
