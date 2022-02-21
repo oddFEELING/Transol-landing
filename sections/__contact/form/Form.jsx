@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import * as S from './Form.styles';
+import axios from 'axios';
 import Input from '../../../components/input/Input';
 import Button from '../../../components/buttons/Button';
 import BtnIcon from '../../../assets/icons/hero_btn_1.svg';
@@ -12,11 +13,32 @@ const Form = () => {
   const formRef = useRef();
 
   //-- Form data effect ------------------/
-  useEffect(() => {
-    console.log(Email);
-    console.log(Name);
-    console.log(Message);
-  }, [Email, Name, Message]);
+  // useEffect(() => {
+  //   console.log(Email);
+  //   console.log(Name);
+  //   console.log(Message);
+  // }, [Email, Name, Message]);
+
+  //-- handle submit ------------------/
+  const submitHandler = async () => {
+    // formRef.current.preventDefault();
+    formRef.current.reset();
+    try {
+      await axios
+        .post('https://transol-backend.herokuapp.com/contact', {
+          email: Email,
+          name: Name,
+          message: Message,
+        })
+        .then((res) => {
+          console.log(res.data);
+          alert('Message Recorded! Thanks for your feedback');
+        });
+    } catch (err) {
+      alert('Failed to send message');
+      console.log(err);
+    }
+  };
 
   return (
     <S.Container>
@@ -50,7 +72,7 @@ const Form = () => {
           text='send!'
           sx={{ marginTop: '4%', width: '30%' }}
           icon={BtnIcon}
-          onClick={() => formRef.current.reset()}
+          onClick={submitHandler}
         />
       </S.MainForm>
     </S.Container>
