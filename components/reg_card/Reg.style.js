@@ -18,17 +18,14 @@ export const Container = styled.div`
   height: 70vh;
   min-height: 350px;
   display: flex;
-  /* position: fixed; */
   z-index: 50;
   align-items: center;
   justify-content: center;
-  top: 10vh;
   pointer-events: ${(props) => (props.open ? 'auto' : 'none')};
   opacity: ${(props) => (props.open ? '1' : '0')};
   transform: ${(props) => (props.open ? 'translateY(0)' : 'translateY(-20vh)')};
   align-self: center;
   background-color: white;
-  /* overflow: hidden; */
 
   border-radius: 0.3vw;
   box-shadow: 5px 10px 35px rgba(0, 0, 0, 0.2);
@@ -36,7 +33,6 @@ export const Container = styled.div`
   @media (max-width: 800px) {
     width: 90%;
     height: 50vh;
-    margin-top: 12vh;
     text-align: center;
     flex-direction: column;
     justify-content: flex-start;

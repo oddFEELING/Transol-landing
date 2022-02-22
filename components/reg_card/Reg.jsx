@@ -75,6 +75,7 @@ const Reg = () => {
           {/* ----- full name ----- */}
           <input
             type='text'
+            required
             minLength={4}
             placeholder='Full name'
             onChange={(e) => setName(e.target.value)}
@@ -83,6 +84,7 @@ const Reg = () => {
           {/* ----- email ----- */}
           <input
             type='email'
+            required
             placeholder='Email'
             onChange={(e) => setEmail(e.target.value)}
           />
