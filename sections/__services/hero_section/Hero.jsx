@@ -9,7 +9,7 @@ import Access_Context from '../../../context/access_context/Access_Context';
 
 const Hero = () => {
   const small = useSmall();
-  const { toggleAccess: action } = useContext(Access_Context);
+  const { actions } = useContext(Access_Context);
 
   // lottie animation settings
   const lottieStyles = {
@@ -46,7 +46,7 @@ const Hero = () => {
         variant='main'
         text='Get early access'
         icon={BtnIcon}
-        onClick={action}
+        onClick={actions.toggleAccess}
       />
     </S.Container>
   );

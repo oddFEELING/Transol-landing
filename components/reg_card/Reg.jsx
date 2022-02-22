@@ -57,6 +57,7 @@ const Reg = () => {
         alert('Failed to add email');
       }
     } else {
+      setIsLoading(false);
       alert('Fields csnnot be empty');
       console.log(`the name is: ${Name} and the email is: ${Email}`);
     }
