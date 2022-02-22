@@ -33,13 +33,17 @@ const Expert = () => {
       {/* ----- Top COntent ----- */}
       <S.TopSection theme={theme}>
         {/* ----- pre text ----- */}
-        <h3>Get Mechanics on demand</h3>
+        <h3 data-aos='fade-down'>Get Mechanics on demand</h3>
 
         {/* ----- Main text ----- */}
-        <h1>Get automobile experts in less than 30minutes</h1>
+        <h1 data-aos='fade-up'>
+          Get automobile experts in less than 30minutes
+        </h1>
 
         {/* ----- desc text ----- */}
-        <p>Request for our Rangers in 3 easy steps</p>
+        <p data-aos='fade-up' data-aos-delay='200'>
+          Request for our Rangers in 3 easy steps
+        </p>
       </S.TopSection>
 
       {/* ----- Step Section ----- */}
