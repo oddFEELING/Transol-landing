@@ -24,23 +24,29 @@ const Form = () => {
   const submitHandler = async () => {
     setLoading(true);
     // formRef.current.preventDefault();
-    formRef.current.reset();
-    try {
-      await axios
-        .post('https://transol-backend.herokuapp.com/contact', {
-          email: Email,
-          name: Name,
-          message: Message,
-        })
-        .then((res) => {
-          setLoading(false);
-          console.log(res.data);
-          alert('Message Recorded! Thanks for your feedback');
-        });
-    } catch (err) {
+
+    if (Email !== '' && Name !== '' && Message !== '') {
+      formRef.current.reset();
+      try {
+        await axios
+          .post('https://transol-backend.herokuapp.com/contact', {
+            email: Email,
+            name: Name,
+            message: Message,
+          })
+          .then((res) => {
+            setLoading(false);
+            console.log(res.data);
+            alert('Message Recorded! Thanks for your feedback');
+          });
+      } catch (err) {
+        setLoading(false);
+        alert('Failed to send message');
+        console.log(err);
+      }
+    } else {
       setLoading(false);
-      alert('Failed to send message');
-      console.log(err);
+      alert('All fields are required');
     }
   };
 
